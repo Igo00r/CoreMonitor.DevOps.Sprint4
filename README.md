@@ -118,8 +118,6 @@ O arquivo `azure-pipelines.yml` define dois estágios:
 ## 8. Integrantes
 
 | Nome | RM |
-|------|----|
-| (preencher) | (preencher) |
+| Igor Neris Soares Alves	RM560088 | 
+| Guilherme Jun Conheci	RM559986 | 
 
-- **GitHub:** (link do repositório)
-- **YouTube:** (link do vídeo)
