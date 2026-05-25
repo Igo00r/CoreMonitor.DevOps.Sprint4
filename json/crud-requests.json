@@ -1,0 +1,51 @@
+{
+  "info": "Colecao de requisicoes CRUD do CoreMonitor. Importe no Postman/Insomnia ou use com curl. Substitua {{BASE_URL}} pela URL do seu Azure App Service (ex: https://coremonitor-api.azurewebsites.net).",
+  "variaveis": {
+    "BASE_URL": "https://coremonitor-api.azurewebsites.net"
+  },
+  "requisicoes": [
+    {
+      "nome": "1. Criar cliente",
+      "metodo": "POST",
+      "url": "{{BASE_URL}}/clientes",
+      "body": { "nome": "Empresa Alpha", "email": "contato@alpha.com" }
+    },
+    {
+      "nome": "2. Listar clientes",
+      "metodo": "GET",
+      "url": "{{BASE_URL}}/clientes"
+    },
+    {
+      "nome": "3. Buscar cliente por id",
+      "metodo": "GET",
+      "url": "{{BASE_URL}}/clientes/1"
+    },
+    {
+      "nome": "4. Atualizar cliente",
+      "metodo": "PUT",
+      "url": "{{BASE_URL}}/clientes/1",
+      "body": { "nome": "Empresa Alpha LTDA", "email": "novo@alpha.com" }
+    },
+    {
+      "nome": "5. Criar venda vinculada ao cliente",
+      "metodo": "POST",
+      "url": "{{BASE_URL}}/vendas",
+      "body": { "cliente_id": 1, "descricao": "Licenca anual do sistema", "valor": 12000.00 }
+    },
+    {
+      "nome": "6. Listar vendas (com nome do cliente via JOIN)",
+      "metodo": "GET",
+      "url": "{{BASE_URL}}/vendas"
+    },
+    {
+      "nome": "7. Remover venda",
+      "metodo": "DELETE",
+      "url": "{{BASE_URL}}/vendas/1"
+    },
+    {
+      "nome": "8. Remover cliente",
+      "metodo": "DELETE",
+      "url": "{{BASE_URL}}/clientes/1"
+    }
+  ]
+}
